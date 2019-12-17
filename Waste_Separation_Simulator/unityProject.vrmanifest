@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.waste_separation_simulator.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Uni\\EMM\\game-project-waste-separation-simulator-master\\Waste_Separation_Simulator\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Waste_Separation_Simulator [Testing]"
+        }
+      }
+    }
+  ]
+}

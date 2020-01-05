@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BinController : MonoBehaviour
 {
     public string sortOfWaste = ""; //Sort of waste -> BioWaste, GlassWaste, PaperWaste, RestWaste, YellowWaste, SonderWaste
 
-    public int score = 0;
-
-    // Lights
+    public int score;
+    
+    // Materials
+    public Material BioLamp;
+    public Material GlassLamp;
+    public Material PaperLamp;
+    public Material RestLamp;
+    public Material YellowLamp;
+    public Material SonderLamp;
 
 
     // Start is called before the first frame update
-
     void Start()
     {
         
@@ -30,11 +36,13 @@ public class BinController : MonoBehaviour
         {
             score += 10;
             //Green Light
+            //sound good
         }
         else if (collision.gameObject.tag == "BioWaste")
         {
             score -= 10;
-            //White Light -> BioWaste
+            //sound bad
+            //White Light -> 
             //Red Light SelfWaste
         }
         else if (collision.gameObject.tag == "GlassWaste")
@@ -54,6 +62,7 @@ public class BinController : MonoBehaviour
             score -= 10;
         }
 
+        //change ScoreText;
         Destroy(collision.gameObject);
     }
 

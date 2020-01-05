@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 public class Scoreboard : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,8 +18,8 @@ public class Scoreboard : MonoBehaviour
         entryTemplate = entryContainer.Find("HighscoreEntryTemplate");
 
         entryTemplate.gameObject.SetActive(false);
-
-        /*highscoreEntryList = new List<HighscoreEntry>()
+        /*
+        highscoreEntryList = new List<HighscoreEntry>()
         {
             new HighscoreEntry{score = 51245},
             new HighscoreEntry{score = 12},
@@ -28,12 +29,14 @@ public class Scoreboard : MonoBehaviour
             new HighscoreEntry{score = 700}
         };*/
 
-
+        string json = File.ReadAllText(Application.dataPath + "highscorefile.json");
         //Getting the saved highscoreTable json
-        string jsonString = PlayerPrefs.GetString("highscoreTable");
-
+        // string jsonString = PlayerPrefs.GetString("highscoreTable");
+        Debug.Log(json);
         //putting it in the list
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+        Highscores highscores = JsonUtility.FromJson<Highscores>(json);
+
+        
 
         // SORTING 
         for(int i = 0; i < highscoreEntryList.Count; i++)
@@ -71,6 +74,8 @@ public class Scoreboard : MonoBehaviour
         PlayerPrefs.Save();
         Debug.Log(PlayerPrefs.GetString("highscoreTable"));
         */
+        //File.WriteAllText(Application.dataPath + "highscorefile.json", json);
+
     }
 
 
@@ -87,18 +92,15 @@ public class Scoreboard : MonoBehaviour
 
             int rank = transformList.Count + 1;
 
-            
-           
-
             int score = highscoreEntry.score;
 
             entryTransform.Find("PositionText").GetComponent<Text>().text = rank.ToString();
             entryTransform.Find("ScoreText").GetComponent<Text>().text = score.ToString();
 
-        transformList.Add(entryTransform);
+            transformList.Add(entryTransform);
     }
 
-    public class Highscores
+    private class Highscores
     {
         public List<HighscoreEntry> highscoreEntryList;
 
@@ -106,7 +108,7 @@ public class Scoreboard : MonoBehaviour
 
 
     [System.Serializable]
-    public class HighscoreEntry
+    private class HighscoreEntry
     {
 
         public int score;

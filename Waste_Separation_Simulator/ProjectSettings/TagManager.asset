@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - WaterLine
+  - BioWaste
+  - GlassWaste
+  - YellowWaste
+  - RestWaste
+  - SonderWaste
+  - PaperWaste
   layers:
   - Default
   - TransparentFX

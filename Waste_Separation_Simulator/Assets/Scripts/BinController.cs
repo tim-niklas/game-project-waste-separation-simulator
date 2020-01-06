@@ -7,9 +7,9 @@ public class BinController : MonoBehaviour
 {
     public string sortOfWaste = ""; //Sort of waste -> BioWaste, GlassWaste, PaperWaste, RestWaste, YellowWaste, SonderWaste
 
-    public int score;
+   public GameObject scoreTextObject; //get the scoreText
     
-    // Materials
+    // Materials for signal lamps
     public Material BioLamp;
     public Material GlassLamp;
     public Material PaperLamp;
@@ -34,35 +34,38 @@ public class BinController : MonoBehaviour
     {
         if (collision.gameObject.tag == sortOfWaste)
         {
-            score += 10;
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber += 10;
             //Green Light
             //sound good
         }
         else if (collision.gameObject.tag == "BioWaste")
         {
-            score -= 10;
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber -= 10;
             //sound bad
             //White Light -> 
             //Red Light SelfWaste
         }
         else if (collision.gameObject.tag == "GlassWaste")
         {
-            score -= 10;
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber -= 10;
         }
         else if (collision.gameObject.tag == "RestWaste")
         {
-            score -= 10;
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber -= 10;
         }
         else if (collision.gameObject.tag == "YellowWaste")
         {
-            score -= 10;
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber -= 10;
         }
         else if (collision.gameObject.tag == "RestWaste")
         {
-            score -= 10;
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber -= 10;
+        }
+        else if (collision.gameObject.tag == "PaperWaste")
+        {
+            scoreTextObject.GetComponent<ScoreController>().scoreNumber -= 10;
         }
 
-        //change ScoreText;
         Destroy(collision.gameObject);
     }
 

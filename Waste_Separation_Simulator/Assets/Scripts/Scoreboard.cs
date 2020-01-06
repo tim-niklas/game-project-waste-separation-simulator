@@ -29,38 +29,41 @@ public class Scoreboard : MonoBehaviour
             new HighscoreEntry{score = 700}
         };*/
 
-        string json = File.ReadAllText(Application.dataPath + "highscorefile.json");
+        //string json = File.ReadAllText(Application.dataPath + "highscorefile.json");
+
         //Getting the saved highscoreTable json
-        // string jsonString = PlayerPrefs.GetString("highscoreTable");
-        Debug.Log(json);
+        string jsonString = PlayerPrefs.GetString("highscoreTable");
+        //Debug.Log(json);
+        Debug.Log(jsonString + "Playerprefs save");
         //putting it in the list
-        Highscores highscores = JsonUtility.FromJson<Highscores>(json);
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         
 
         // SORTING 
-        for(int i = 0; i < highscoreEntryList.Count; i++)
+        
+        for(int i = 0; i < highscores.highscoreEntryList.Count; i++)
         {
-            for(int j=i +1; j<highscoreEntryList.Count; j++)
+            for(int j=i +1; j<highscores.highscoreEntryList.Count; j++)
             {
-                if(highscoreEntryList[j].score > highscoreEntryList[i].score)
+                if(highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
                 {
                     //switch if next one is bigger
-                    HighscoreEntry tmp = highscoreEntryList[i];
-                    highscoreEntryList[i] = highscoreEntryList[j];
-                    highscoreEntryList[j] = tmp;
+                    HighscoreEntry tmp = highscores.highscoreEntryList[i];
+                    highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
+                    highscores.highscoreEntryList[j] = tmp;
 
                 }
 
 
             }
         }
-
+        
 
 
         //creates a line for every score that has been made 
         highscoreEntryTransformList = new List<Transform>();
-        foreach (HighscoreEntry highscoreEntry in highscoreEntryList)
+        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
         {
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
 

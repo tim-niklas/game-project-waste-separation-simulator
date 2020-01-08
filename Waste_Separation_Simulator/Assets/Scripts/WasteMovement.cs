@@ -6,7 +6,7 @@ public class WasteMovement : MonoBehaviour
 {
 
     private bool inWater;
-    public float movementSpeed = 1; // Waste's speed
+    public float movementSpeed = 0.75f; // Waste's speed
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class WasteMovement : MonoBehaviour
         // Make the waste moving in the water
         if (inWater)
         {
-            transform.rotation = Quaternion.Euler(Random.Range(10f, 0f), Random.Range(5f, 0f), Random.Range(5f, 0f)); //try to simulate how the object moves in water - TO-DO: improve
+            transform.rotation = Quaternion.Euler(Random.Range(2.5f, -2.5f), Random.Range(2.5f, -2.5f), Random.Range(2.5f, -2.5f)); //try to simulate how the object moves in water - TO-DO: improve
             transform.position = transform.position + new Vector3(0, 0, -1 * movementSpeed * Time.deltaTime);
         }
     }

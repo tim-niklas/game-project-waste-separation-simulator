@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 15f; // 2 minutes
+    public float currentTime = 0f;
+    public float startingTime = 120; // 2 minutes
 
     public bool timerStart = false; // bool for the countdown 3,2,1,GO
 
@@ -22,24 +22,24 @@ public class TimerController : MonoBehaviour
     void Update()
     {
         if(timerStart == true) {
-      
-            string minutes = ((int)currentTime / 60).ToString();
-            string seconds = (currentTime % 60).ToString("00");
 
             currentTime -= 1 * Time.deltaTime;
 
+            string minutes = Mathf.Floor(currentTime / 60).ToString();
+            string seconds = Mathf.Floor(currentTime % 60).ToString("00");
+
             timerText.text = minutes + ":" + seconds;
 
-            if (currentTime < 10)
+            if (currentTime <= 10)
             {
                 timerText.color = Color.red;
             }
-            else if (currentTime < 30)
+            else if (currentTime <= 30)
             {
                 timerText.color = Color.yellow;
             }
                 
-            if (currentTime < 0)
+            if (currentTime <= 0)
             {
                  currentTime = 0;
                  //Stop game (like Pausemenü) and show ScoreDisplay

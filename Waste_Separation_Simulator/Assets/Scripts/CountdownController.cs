@@ -10,17 +10,19 @@ public class CountdownController : MonoBehaviour
     float startingTime = 3f; // 3,2,1,GO
 
     public Text countdownText;
-          
+
+    public AudioSource countdownAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         currentTime = startingTime;
+        countdownAudio.GetComponent<AudioSource>().Play(0);
     }
 
     // Update is called once per frame
     void Update()
     {
- 
         currentTime -= 1 * Time.deltaTime;
         
         if(currentTime > 1)

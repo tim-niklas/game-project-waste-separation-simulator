@@ -12,10 +12,15 @@ public class TimerController : MonoBehaviour
 
     public Text timerText;
 
+    public AudioSource timerAudio;
+
+    public GameObject endScreen;
+
     // Start is called before the first frame update
     void Start()
     {
         currentTime = startingTime;
+        timerAudio.Play(0);
     }
 
     // Update is called once per frame
@@ -23,12 +28,12 @@ public class TimerController : MonoBehaviour
     {
         if(timerStart == true) {
 
-            currentTime -= 1 * Time.deltaTime;
-
             string minutes = Mathf.Floor(currentTime / 60).ToString();
             string seconds = Mathf.Floor(currentTime % 60).ToString("00");
 
             timerText.text = minutes + ":" + seconds;
+
+            currentTime -= 1 * Time.deltaTime;
 
             if (currentTime <= 10)
             {
@@ -38,12 +43,25 @@ public class TimerController : MonoBehaviour
             {
                 timerText.color = Color.yellow;
             }
-                
-            if (currentTime <= 0)
+
+   
+            if (currentTime <= 22)
             {
-                 currentTime = 0;
-                 //Stop game (like Pausemenü) and show ScoreDisplay
-             }
+                timerAudio.UnPause();
+            }
+            else
+            {
+                timerAudio.Pause();
+            }
+
+            if (currentTime <= 1)
+            {
+                currentTime = 0;
+
+                //Stop game (like Pausemenü) and show ScoreDisplay
+                endScreen.SetActive(true);
+            }
+
         }
     }
 }

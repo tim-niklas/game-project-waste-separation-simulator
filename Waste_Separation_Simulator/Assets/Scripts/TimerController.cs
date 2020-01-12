@@ -45,7 +45,7 @@ public class TimerController : MonoBehaviour
             }
 
    
-            if (currentTime <= 22)
+            if (currentTime <= 20)
             {
                 timerAudio.UnPause();
             }
@@ -57,7 +57,7 @@ public class TimerController : MonoBehaviour
             if (currentTime <= 1)
             {
                 currentTime = 0;
-
+                timerAudio.Pause();
                 //Stop game (like Pausemenü) and show ScoreDisplay
                 endScreen.SetActive(true);
             }

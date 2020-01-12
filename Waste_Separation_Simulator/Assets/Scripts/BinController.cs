@@ -14,6 +14,8 @@ public class BinController : MonoBehaviour
 
     public GameObject scoreTextObject; //get the scoreText
 
+    public GameObject diffController;
+
     //Audio
     public AudioSource audioWrongWaste;
     public AudioSource audioRightWaste;
@@ -33,7 +35,9 @@ public class BinController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        //change the difficulty
+        diffController = GameObject.Find("DifficultyController");
+        minusTime = diffController.GetComponent<DifficultyController>().minusTime;
     }
 
     // Update is called once per frame

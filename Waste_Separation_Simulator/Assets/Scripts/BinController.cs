@@ -14,7 +14,7 @@ public class BinController : MonoBehaviour
 
     public GameObject scoreTextObject; //get the scoreText
 
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject diffController;
 
     //Audio

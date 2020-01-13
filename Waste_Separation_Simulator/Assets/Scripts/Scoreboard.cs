@@ -11,8 +11,18 @@ public class Scoreboard : MonoBehaviour
     private Transform entryTemplate;
     private List<HighscoreEntry> highscoreEntryList;
     private List<Transform> highscoreEntryTransformList;
-    private void Awake()
+    private void OnEnable()
     {
+        if (PlayerPrefs.HasKey("highscoreTable") == false)
+        {
+
+            Highscores highscoresInit = new Highscores { highscoreEntryList = highscoreEntryList };
+            string json = JsonUtility.ToJson(highscoresInit);
+            PlayerPrefs.SetString("highscoreTable", json);
+            Debug.Log("initiation");
+            PlayerPrefs.Save();
+        }
+
 
         //AddHighscoreEntry(10000);
 
@@ -21,7 +31,8 @@ public class Scoreboard : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        PlayerPrefs.DeleteAll();
+        // DAS HIER`LÖSCHT ALLE SPEICHERSTÄNDE
+        //PlayerPrefs.DeleteAll();
 
         //Getting the saved highscoreTable json
         string jsonString = PlayerPrefs.GetString("highscoreTable");
@@ -97,6 +108,7 @@ public class Scoreboard : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
         //Add new entry to Highscores
+        
         highscores.highscoreEntryList.Add(highscoreEntry);
         //save updated Highscores
         string json = JsonUtility.ToJson(highscores);
@@ -124,10 +136,10 @@ public class Scoreboard : MonoBehaviour
 }
 //putting the scores into a list and saving it to a json 
 /*
-Highscores highscores = new Highscores { highscoreEntryList = highscoreEntryList };
-string json = JsonUtility.ToJson(highscores);
-PlayerPrefs.SetString("highscoreTable", json);
-PlayerPrefs.Save();
+
+
+
+
 */
 /*
 highscoreEntryList = new List<HighscoreEntry>()

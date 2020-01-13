@@ -16,7 +16,7 @@ public class TimerController : MonoBehaviour
     public Scoreboard scoreBoa;
 
     public AudioSource timerAudio;
-
+    public bool endScreenShown;
     public GameObject endScreen;
 
     // Start is called before the first frame update
@@ -61,11 +61,25 @@ public class TimerController : MonoBehaviour
             {
                 currentTime = 0;
                 timerAudio.Pause();
-                scoreBoa.AddHighscoreEntry((int)scoreNum.scoreNumber);
+                if (endScreenShown == false)
+                {
+                    
+                    endScreen.SetActive(true);
+                   
+                    scoreBoa.AddHighscoreEntry((int)scoreNum.scoreNumber);
+                    endScreenShown = true;
+                    
+
+                }
+                
                 //Stop game (like Pausemenü) and show ScoreDisplay
-                endScreen.SetActive(true);
+               
             }
 
         }
     }
+
+
+
+
 }

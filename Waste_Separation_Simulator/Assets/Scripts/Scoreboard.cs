@@ -45,7 +45,7 @@ public class Scoreboard : MonoBehaviour
 
             }
         }
-
+       
         //creates a line for every score that has been made 
         highscoreEntryTransformList = new List<Transform>();
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
@@ -58,7 +58,10 @@ public class Scoreboard : MonoBehaviour
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
-
+        if(transformList.Count >= 10)
+        {
+            return;
+        }
         float templateHeight = 20f;
         Transform entryTransform = Instantiate(entryTemplate, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
@@ -66,6 +69,7 @@ public class Scoreboard : MonoBehaviour
         entryTransform.gameObject.SetActive(true);
 
         int rank = transformList.Count + 1;
+
 
         int score = highscoreEntry.score;
 

@@ -21,6 +21,8 @@ public class Scoreboard : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
+        PlayerPrefs.DeleteAll();
+
         //Getting the saved highscoreTable json
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         //Debug.Log(jsonString + "Playerprefs save");
@@ -58,10 +60,12 @@ public class Scoreboard : MonoBehaviour
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
+        //cap to 10 entries
         if(transformList.Count >= 10)
         {
             return;
         }
+        //choose position where to put the highscore entry
         float templateHeight = 20f;
         Transform entryTransform = Instantiate(entryTemplate, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
@@ -69,8 +73,6 @@ public class Scoreboard : MonoBehaviour
         entryTransform.gameObject.SetActive(true);
 
         int rank = transformList.Count + 1;
-
-
         int score = highscoreEntry.score;
 
         entryTransform.Find("PositionText").GetComponent<Text>().text = rank.ToString();
@@ -115,8 +117,6 @@ public class Scoreboard : MonoBehaviour
     {
 
         public int score;
-
-
 
     }
 

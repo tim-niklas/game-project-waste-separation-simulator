@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class TimerController : MonoBehaviour
 {
     public float currentTime = 0f;
-    public float startingTime = 120; // 2 minutes
+    public float startingTime = 5; // 2 minutes
 
     public bool timerStart = false; // bool for the countdown 3,2,1,GO
 
     public Text timerText;
+
+    public ScoreController scoreNum;
+    public Scoreboard scoreBoa;
 
     public AudioSource timerAudio;
 
@@ -58,6 +61,7 @@ public class TimerController : MonoBehaviour
             {
                 currentTime = 0;
                 timerAudio.Pause();
+                scoreBoa.AddHighscoreEntry((int)scoreNum.scoreNumber);
                 //Stop game (like Pausemenü) and show ScoreDisplay
                 endScreen.SetActive(true);
             }

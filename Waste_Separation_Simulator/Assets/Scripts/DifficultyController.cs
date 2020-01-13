@@ -16,6 +16,7 @@ public class DifficultyController : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        easy.GetComponent<Image>().color = Color.grey;
     }
 
     // Update is called once per frame

@@ -7,10 +7,10 @@ public class BinController : MonoBehaviour
 {
     public string sortOfWaste = ""; //Sort of waste -> BioWaste, GlassWaste, PaperWaste, RestWaste, YellowWaste, SonderWaste
 
-    public float minusPoints = 10;
+    public float minusPoints = 5;
     public float plusPoints = 10;
     public float minusTime = 5;
-    public float plusTime = 2;
+    public float plusTime = 4;
 
     public GameObject scoreTextObject; //get the scoreText
 

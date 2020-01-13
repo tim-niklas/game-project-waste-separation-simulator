@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12035518, g: 0.18584053, b: 0.3342108, a: 1}
+  m_IndirectSpecularColor: {r: 0.12027651, g: 0.18588527, b: 0.33431786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3186,7 +3186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 116
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 2
@@ -8395,7 +8395,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6, y: 1.3e-44, z: 0, w: 1}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -15630,7 +15630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fe76891e0009ba34bbb1b99b908bab9e, type: 2}
+  - {fileID: 2100000, guid: 439c206f27ee180478110a0d1da912e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18772,7 +18772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 116
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 2
@@ -20695,6 +20695,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690838967}
     m_Modifications:
+    - target: {fileID: 1205138334, guid: fd0f17ffa22584a499905855cc983db1, type: 3}
+      propertyPath: hideHandOnAttach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205138334, guid: fd0f17ffa22584a499905855cc983db1, type: 3}
+      propertyPath: handFollowTransform
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8107660278488956188, guid: fd0f17ffa22584a499905855cc983db1,
         type: 3}
       propertyPath: m_LocalPosition.x

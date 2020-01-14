@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public GameObject settingsSubMenuGerman;
+    public GameObject startMenuGerman;
     public GameObject settingsSubMenu;
     public GameObject startMenu;
     public Button play;

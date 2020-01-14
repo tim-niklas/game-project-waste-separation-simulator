@@ -34,6 +34,7 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
+        //--------------------------- MAIN MENU --------------------------------------
         if (e.target.name == "Play")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -43,6 +44,7 @@ public class SceneHandler : MonoBehaviour
             settingsSubMenu.SetActive(true);
             startMenu.SetActive(false);
         }
+        //--------------------------- SETTINGS MENU --------------------------------------
         else if (e.target.name == "back")
         {
             settingsSubMenu.SetActive(false);
@@ -66,23 +68,24 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
+        //--------------------------- MAIN MENU --------------------------------------
         if (e.target.name == "Play")
         {
             //Debug.Log("Button was entered");
             play.GetComponent<Image>().color = hoverColor;
-                
         }
         else if (e.target.name == "Settings")
         {
             settings.GetComponent<Image>().color = hoverColor;
         }
-        else if (e.target.name == "back")
-        {
-            back.GetComponent<Image>().color = hoverColor;
-        }
         else if (e.target.name == "Quit")
         {
             quit.GetComponent<Image>().color = hoverColor;
+        }
+        //--------------------------- SETTINGS MENU --------------------------------------
+        else if (e.target.name == "back")
+        {
+            back.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Easy")
         {
@@ -108,15 +111,12 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
+        //--------------------------- MAIN MENU --------------------------------------
         if (e.target.name == "Play")
         {
-            
             play.GetComponent<Image>().color = stopHoverColor;
         }
-        else if (e.target.name == "back")
-        {
-            back.GetComponent<Image>().color = stopHoverColor;
-        }
+        
         else if (e.target.name == "Settings")
         {
             settings.GetComponent<Image>().color = stopHoverColor;
@@ -124,6 +124,11 @@ public class SceneHandler : MonoBehaviour
         else if (e.target.name == "Quit")
         {
             quit.GetComponent<Image>().color = stopHoverColor;
+        }
+        //--------------------------- SETTINGS MENU --------------------------------------
+        else if (e.target.name == "back")
+        {
+            back.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Easy")
         {

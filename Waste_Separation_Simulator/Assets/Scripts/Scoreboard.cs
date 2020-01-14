@@ -19,7 +19,7 @@ public class Scoreboard : MonoBehaviour
             Highscores highscoresInit = new Highscores { highscoreEntryList = highscoreEntryList };
             string json = JsonUtility.ToJson(highscoresInit);
             PlayerPrefs.SetString("highscoreTable", json);
-            Debug.Log("initiation");
+            //Debug.Log("initiation");
             PlayerPrefs.Save();
         }
 

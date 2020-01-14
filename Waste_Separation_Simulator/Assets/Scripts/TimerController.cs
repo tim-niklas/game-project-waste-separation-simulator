@@ -63,10 +63,12 @@ public class TimerController : MonoBehaviour
                 timerAudio.Pause();
                 if (endScreenShown == false)
                 {
-                    
                     endScreen.SetActive(true);
-                   
                     scoreBoa.AddHighscoreEntry((int)scoreNum.scoreNumber);
+                    endScreen.SetActive(false);
+                    endScreen.SetActive(true);
+
+                    
                     endScreenShown = true;
                     
 

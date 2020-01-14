@@ -68,7 +68,6 @@ public class TimerController : MonoBehaviour
                     endScreen.SetActive(false);
                     endScreen.SetActive(true);
 
-                    
                     endScreenShown = true;
                     
 

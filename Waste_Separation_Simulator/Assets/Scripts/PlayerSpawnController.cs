@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerSpawnController : MonoBehaviour
 {
-    public GameObject Player;
+    GameObject Player;
     public GameObject PlayerPrefab;
 
     public GameObject SpawnLocation;
@@ -14,15 +14,14 @@ public class PlayerSpawnController : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             //player already exists, so just move it to the spawn location and set the Player gameobject parameter
-            Debug.Log("Player from MenuSccene destroyen");
+            Debug.Log("Player from MenuScene destroyen");
             Player = GameObject.FindGameObjectWithTag("Player");
             Destroy(Player);
 
         }
         else
         {
-            //instantiate the player
-            Player = Instantiate(PlayerPrefab);
+            Debug.Log("no player from menu exist");
 
         }
     }

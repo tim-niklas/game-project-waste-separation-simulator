@@ -72,40 +72,40 @@ public class SceneHandler : MonoBehaviour
         if (e.target.name == "Play")
         {
             //Debug.Log("Button was entered");
-            play.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Settings")
         {
-            settings.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Quit")
         {
-            quit.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         //--------------------------- SETTINGS MENU --------------------------------------
         else if (e.target.name == "back")
         {
-            back.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Easy")
         {
-            easy.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Normal")
         {
-            normal.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Hard")
         {
-            hard.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "English")
         {
-            english.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Deutsch")
         {
-            deutsch.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
     }
 
@@ -114,41 +114,41 @@ public class SceneHandler : MonoBehaviour
         //--------------------------- MAIN MENU --------------------------------------
         if (e.target.name == "Play")
         {
-            play.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         
         else if (e.target.name == "Settings")
         {
-            settings.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Quit")
         {
-            quit.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         //--------------------------- SETTINGS MENU --------------------------------------
         else if (e.target.name == "back")
         {
-            back.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Easy")
         {
-            easy.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Normal")
         {
-            normal.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Hard")
         {
-            hard.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "English")
         {
-            english.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Deutsch")
         {
-            deutsch.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = stopHoverColor;
         }
     }
 }

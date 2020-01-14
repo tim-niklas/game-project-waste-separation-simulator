@@ -17639,8 +17639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 740069498}
-  settingsSubMenuGerman: {fileID: 0}
-  startMenuGerman: {fileID: 0}
+  settingsSubMenuGerman: {fileID: 2104577007}
+  startMenuGerman: {fileID: 1382959205}
   settingsSubMenu: {fileID: 2022042512}
   startMenu: {fileID: 757071789}
   play: {fileID: 165239376}

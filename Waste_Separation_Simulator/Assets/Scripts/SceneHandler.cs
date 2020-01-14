@@ -50,6 +50,10 @@ public class SceneHandler : MonoBehaviour
             settingsSubMenu.SetActive(false);
             startMenu.SetActive(true);
         }
+        else if (e.target.name == "Deutsch")
+        {
+            deutsch.onClick.Invoke();
+        }
         else if (e.target.name == "Easy")
         {
             easy.onClick.Invoke();

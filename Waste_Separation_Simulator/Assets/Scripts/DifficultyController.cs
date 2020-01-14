@@ -31,6 +31,7 @@ public class DifficultyController : MonoBehaviour
         easy.GetComponent<Image>().color = Color.grey;
         hard.GetComponent<Image>().color = Color.white;
         medium.GetComponent<Image>().color = Color.white;
+        Debug.Log("Invoked Easy");
     } 
     public void DiffMedium()
     {
@@ -38,6 +39,7 @@ public class DifficultyController : MonoBehaviour
         medium.GetComponent<Image>().color = Color.grey;
         easy.GetComponent<Image>().color = Color.white;
         hard.GetComponent<Image>().color = Color.white;
+        Debug.Log("Invoked Medium");
     }
 
     public void DiffHard()
@@ -46,5 +48,6 @@ public class DifficultyController : MonoBehaviour
         hard.GetComponent<Image>().color = Color.grey;
         easy.GetComponent<Image>().color = Color.white;
         medium.GetComponent<Image>().color = Color.white;
+        Debug.Log("Invoked Hard");
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
+using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "Play")
         {
-            Debug.Log("Cube was clicked");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if (e.target.name == "Button")
         {

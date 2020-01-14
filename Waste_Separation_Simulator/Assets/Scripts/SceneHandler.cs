@@ -46,6 +46,19 @@ public class SceneHandler : MonoBehaviour
             settingsSubMenu.SetActive(false);
             startMenu.SetActive(true);
         }
+        else if (e.target.name == "Easy")
+        {
+            easy.onClick.Invoke();
+            Debug.Log("invoked easy");
+        }
+        else if (e.target.name == "Normal")
+        {
+            normal.onClick.Invoke();
+        }
+        else if (e.target.name == "Hard")
+        {
+            hard.onClick.Invoke();
+        }
     }
 
 
@@ -60,6 +73,10 @@ public class SceneHandler : MonoBehaviour
         else if (e.target.name == "Settings")
         {
             settings.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "back")
+        {
+            back.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Quit")
         {
@@ -93,6 +110,10 @@ public class SceneHandler : MonoBehaviour
         {
             
             play.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "back")
+        {
+            back.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Settings")
         {

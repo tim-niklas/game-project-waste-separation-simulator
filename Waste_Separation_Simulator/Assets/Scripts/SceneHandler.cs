@@ -21,8 +21,8 @@ public class SceneHandler : MonoBehaviour
     public Button easy;
     public Button normal;
     public Button hard;
-    
-
+    public Color hoverColor = Color.grey;
+    public Color stopHoverColor = Color.white;
     void Awake()
     {
         laserPointer.PointerIn += PointerInside;
@@ -51,25 +51,76 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "Play")
         {
-            Debug.Log("Cube was entered");
+            //Debug.Log("Button was entered");
+            play.GetComponent<Image>().color = hoverColor;
+                
         }
-        else if (e.target.name == "Button")
+        else if (e.target.name == "Settings")
         {
-            Debug.Log("Button was entered");
+            settings.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "Quit")
+        {
+            quit.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "Easy")
+        {
+            easy.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "Normal")
+        {
+            normal.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "Hard")
+        {
+            hard.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "English")
+        {
+            english.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "Deutsch")
+        {
+            deutsch.GetComponent<Image>().color = hoverColor;
         }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "Play")
         {
-            Debug.Log("Cube was exited");
+            
+            play.GetComponent<Image>().color = stopHoverColor;
         }
-        else if (e.target.name == "Button")
+        else if (e.target.name == "Settings")
         {
-            Debug.Log("Button was exited");
+            settings.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "Quit")
+        {
+            quit.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "Easy")
+        {
+            easy.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "Normal")
+        {
+            normal.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "Hard")
+        {
+            hard.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "English")
+        {
+            english.GetComponent<Image>().color = stopHoverColor;
+        }
+        else if (e.target.name == "Deutsch")
+        {
+            deutsch.GetComponent<Image>().color = stopHoverColor;
         }
     }
 }

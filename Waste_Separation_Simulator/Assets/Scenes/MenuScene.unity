@@ -14198,15 +14198,17 @@ MonoBehaviour:
   laserPointer: {fileID: 740069498}
   settingsSubMenu: {fileID: 2022042512}
   startMenu: {fileID: 757071789}
-  play: {fileID: 0}
-  settings: {fileID: 0}
-  quit: {fileID: 0}
-  back: {fileID: 0}
-  english: {fileID: 0}
-  deutsch: {fileID: 0}
-  easy: {fileID: 0}
-  normal: {fileID: 0}
-  hard: {fileID: 0}
+  play: {fileID: 165239376}
+  settings: {fileID: 1161494891}
+  quit: {fileID: 1271573107}
+  back: {fileID: 33979}
+  english: {fileID: 1023900350}
+  deutsch: {fileID: 346947512}
+  easy: {fileID: 1744810216}
+  normal: {fileID: 811195783}
+  hard: {fileID: 701612319}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  stopHoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1931459257
 Transform:
   m_ObjectHideFlags: 0

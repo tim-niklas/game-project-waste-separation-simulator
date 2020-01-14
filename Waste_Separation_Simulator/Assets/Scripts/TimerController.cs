@@ -19,8 +19,9 @@ public class TimerController : MonoBehaviour
     public AudioSource timerAudio;
     public bool endScreenShown;
     public GameObject endScreen;
-    
-    public SteamVR_LaserPointer laserPointer;
+   
+    SteamVR_LaserPointer laserPointer;
+    public GameObject player;
 
     public GameObject waste;
 
@@ -29,7 +30,10 @@ public class TimerController : MonoBehaviour
     {
         currentTime = startingTime;
         timerAudio.Play(0);
-    
+        player = GameObject.FindGameObjectWithTag("Player");
+        laserPointer = player.GetComponent<SteamVR_LaserPointer>();
+
+        laserPointer.enabled = !laserPointer.enabled;
     }
 
     // Update is called once per frame

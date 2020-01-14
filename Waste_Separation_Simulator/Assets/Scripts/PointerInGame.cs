@@ -53,7 +53,7 @@ public class PointerInGame : MonoBehaviour
     {
         if (e.target.name == "Restart")
         {
-            exit.GetComponent<Image>().color = buttonColor;
+            restart.GetComponent<Image>().color = buttonColor;
         }
         else if (e.target.name == "Exit")
         {

@@ -8352,7 +8352,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -7.486717, z: 8.14e-43, w: 0}
+  m_BoundingSphereOverride: {x: 8.14e-43, y: -8.747574, z: 8.14e-43, w: 8.11e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11823,6 +11823,7 @@ MonoBehaviour:
   timerAudio: {fileID: 978926155}
   endScreenShown: 0
   endScreen: {fileID: 1145883804}
+  laserPointer: {fileID: 7277134359942086752}
   waste: {fileID: 690838966}
 --- !u!114 &1069201924
 MonoBehaviour:
@@ -14021,7 +14022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d5b4211f69f7843a34cdb1b229e0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   PlayerPrefab: {fileID: 1302948377}
   SpawnLocation: {fileID: 1302948377}
 --- !u!4 &1389454454
@@ -18483,7 +18483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49422c0315818d744a41e67f7f877093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  laserPointer: {fileID: 7277134359942086752}
   restart: {fileID: 381022463}
   exit: {fileID: 1988764318}
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -20633,6 +20633,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 622966311}
     m_Modifications:
+    - target: {fileID: 7277134358520056755, guid: 1e9818cd11a792940afd4e0aaae1d1b8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7277134358791203398, guid: 1e9818cd11a792940afd4e0aaae1d1b8,
         type: 3}
       propertyPath: m_Name
@@ -20700,6 +20705,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e9818cd11a792940afd4e0aaae1d1b8, type: 3}
+--- !u!114 &7277134359942086752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277134358520056755, guid: 1e9818cd11a792940afd4e0aaae1d1b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7277134359942086751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7443576627302205208
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class TimerController : MonoBehaviour
     public GameObject endScreen;
    
     SteamVR_LaserPointer laserPointer;
-    public GameObject player;
+    GameObject player;
 
     public GameObject waste;
 
@@ -30,7 +30,7 @@ public class TimerController : MonoBehaviour
     {
         currentTime = startingTime;
         timerAudio.Play(0);
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("RightHand");
         laserPointer = player.GetComponent<SteamVR_LaserPointer>();
 
         laserPointer.enabled = !laserPointer.enabled;

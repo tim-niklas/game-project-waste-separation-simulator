@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12027651, g: 0.18588527, b: 0.33431786, a: 1}
+  m_IndirectSpecularColor: {r: 0.12035518, g: 0.18584053, b: 0.3342108, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11823,7 +11823,6 @@ MonoBehaviour:
   timerAudio: {fileID: 978926155}
   endScreenShown: 0
   endScreen: {fileID: 1145883804}
-  laserPointer: {fileID: 1564707820}
   player: {fileID: 0}
   waste: {fileID: 690838966}
 --- !u!114 &1069201924
@@ -14020,7 +14019,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1389454452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1be1e73e3d03d944b4b0b697ad64bad, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d5b4211f69f7843a34cdb1b229e0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}

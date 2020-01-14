@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class PointerInGame : MonoBehaviour
 {
-    public SteamVR_LaserPointer laserPointer;
+    SteamVR_LaserPointer laserPointer;
+    public GameObject player;
 
     public Button restart;
     public Button exit;
@@ -18,6 +19,9 @@ public class PointerInGame : MonoBehaviour
 
     void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("RightHand");
+        laserPointer = player.GetComponent<SteamVR_LaserPointer>();
+
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;

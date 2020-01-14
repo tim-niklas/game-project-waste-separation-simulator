@@ -22,6 +22,8 @@ public class PlayerSpawnController : MonoBehaviour
         else
         {
             Debug.Log("no player from menu exist");
+            Player = Instantiate(PlayerPrefab);
+            Player.transform.position = SpawnLocation.transform.position;
 
         }
     }

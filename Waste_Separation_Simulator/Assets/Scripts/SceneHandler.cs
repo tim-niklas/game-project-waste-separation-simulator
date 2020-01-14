@@ -10,6 +10,18 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public GameObject settingsSubMenu;
+    public GameObject startMenu;
+    public Button play;
+    public Button settings;
+    public Button quit;
+    public Button back;
+    public Button english;
+    public Button deutsch;
+    public Button easy;
+    public Button normal;
+    public Button hard;
+    
 
     void Awake()
     {
@@ -24,11 +36,18 @@ public class SceneHandler : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        else if (e.target.name == "Button")
+        else if(e.target.name == "Settings")
         {
-            Debug.Log("Button was clicked");
+            settingsSubMenu.SetActive(true);
+            startMenu.SetActive(false);
+        }
+        else if (e.target.name == "back")
+        {
+            settingsSubMenu.SetActive(false);
+            startMenu.SetActive(true);
         }
     }
+
 
     public void PointerInside(object sender, PointerEventArgs e)
     {

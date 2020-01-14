@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR.Extras;
 
 public class TimerController : MonoBehaviour
 {
@@ -18,12 +19,17 @@ public class TimerController : MonoBehaviour
     public AudioSource timerAudio;
     public bool endScreenShown;
     public GameObject endScreen;
+    
+    public SteamVR_LaserPointer laserPointer;
+
+    public GameObject waste;
 
     // Start is called before the first frame update
     void Start()
     {
         currentTime = startingTime;
         timerAudio.Play(0);
+    
     }
 
     // Update is called once per frame
@@ -68,7 +74,12 @@ public class TimerController : MonoBehaviour
                     endScreen.SetActive(false);
                     endScreen.SetActive(true);
 
-                    
+                    //Hide all Waste
+                    waste.SetActive(false);
+                    //Activate Pointer
+                    laserPointer.enabled = !laserPointer.enabled;
+
+
                     endScreenShown = true;
                     
 

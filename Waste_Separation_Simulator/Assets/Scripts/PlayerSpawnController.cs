@@ -16,7 +16,7 @@ public class PlayerSpawnController : MonoBehaviour
             //player already exists, so just move it to the spawn location and set the Player gameobject parameter
             Debug.Log("Player from MenuScene destroyen");
             Player = GameObject.FindGameObjectWithTag("Player");
-            Destroy(Player);
+            Player.transform.position = SpawnLocation.transform.position;
 
         }
         else

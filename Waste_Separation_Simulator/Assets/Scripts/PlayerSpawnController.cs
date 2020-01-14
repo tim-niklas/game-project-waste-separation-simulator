@@ -23,6 +23,7 @@ public class PlayerSpawnController : MonoBehaviour
         {
             //instantiate the player
             Player = Instantiate(PlayerPrefab);
-         
+
         }
-   }
+    }
+}

@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 54008108}
   - component: {fileID: 54008107}
   m_Layer: 5
-  m_Name: back
+  m_Name: zurueck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1429,6 +1429,7 @@ GameObject:
   - component: {fileID: 61979308}
   - component: {fileID: 61979307}
   - component: {fileID: 61979306}
+  - component: {fileID: 61979309}
   m_Layer: 5
   m_Name: Easy
   m_TagString: Untagged
@@ -1546,6 +1547,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61979304}
   m_CullTransparentMesh: 0
+--- !u!65 &61979309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61979304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 60.61, y: 26.4, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &67635453
 GameObject:
   m_ObjectHideFlags: 0
@@ -8537,7 +8551,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8573,7 +8587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9912,6 +9926,7 @@ GameObject:
   - component: {fileID: 579487403}
   - component: {fileID: 579487402}
   - component: {fileID: 579487401}
+  - component: {fileID: 579487404}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -10029,6 +10044,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579487399}
   m_CullTransparentMesh: 0
+--- !u!65 &579487404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579487399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 73.11, y: 28.91, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &579938189
 GameObject:
   m_ObjectHideFlags: 0
@@ -12580,7 +12608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &757071790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14274,6 +14302,7 @@ GameObject:
   - component: {fileID: 884491575}
   - component: {fileID: 884491574}
   - component: {fileID: 884491573}
+  - component: {fileID: 884491576}
   m_Layer: 5
   m_Name: Hard
   m_TagString: Untagged
@@ -14391,6 +14420,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884491571}
   m_CullTransparentMesh: 0
+--- !u!65 &884491576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884491571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 75.7, y: 31.7, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &904798463
 GameObject:
   m_ObjectHideFlags: 0
@@ -14558,6 +14600,7 @@ GameObject:
   - component: {fileID: 912155265}
   - component: {fileID: 912155264}
   - component: {fileID: 912155263}
+  - component: {fileID: 912155266}
   m_Layer: 5
   m_Name: English
   m_TagString: Untagged
@@ -14730,6 +14773,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912155261}
   m_CullTransparentMesh: 0
+--- !u!65 &912155266
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912155261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 28.24, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &921499457
 GameObject:
   m_ObjectHideFlags: 0
@@ -20647,6 +20703,7 @@ GameObject:
   - component: {fileID: 1292924781}
   - component: {fileID: 1292924780}
   - component: {fileID: 1292924779}
+  - component: {fileID: 1292924782}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -20764,6 +20821,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292924777}
   m_CullTransparentMesh: 0
+--- !u!65 &1292924782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292924777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 91.1, y: 25.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1296298721
 GameObject:
   m_ObjectHideFlags: 0
@@ -21976,6 +22046,7 @@ GameObject:
   - component: {fileID: 1355222247}
   - component: {fileID: 1355222246}
   - component: {fileID: 1355222245}
+  - component: {fileID: 1355222248}
   m_Layer: 5
   m_Name: Deutsch
   m_TagString: Untagged
@@ -22082,6 +22153,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355222243}
   m_CullTransparentMesh: 0
+--- !u!65 &1355222248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355222243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 87.12, y: 28, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1382959205
 GameObject:
   m_ObjectHideFlags: 0
@@ -24536,8 +24620,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -30659,8 +30743,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 740069498}
-  settingsSubMenuGerman: {fileID: 2104577007}
-  startMenuGerman: {fileID: 1382959205}
   settingsSubMenu: {fileID: 2022042512}
   startMenu: {fileID: 757071789}
   play: {fileID: 165239376}
@@ -30672,6 +30754,15 @@ MonoBehaviour:
   easy: {fileID: 1744810216}
   normal: {fileID: 811195783}
   hard: {fileID: 701612319}
+  settingsSubMenuGerman: {fileID: 2104577007}
+  startMenuGerman: {fileID: 1382959205}
+  zurueck: {fileID: 54008108}
+  beenden: {fileID: 1292924779}
+  englishInGerman: {fileID: 912155263}
+  deutschInGerman: {fileID: 1355222245}
+  einfach: {fileID: 61979306}
+  normalGerman: {fileID: 579487401}
+  schwer: {fileID: 884491573}
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   stopHoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1931459257
@@ -33413,7 +33504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2104577008
 MonoBehaviour:
   m_ObjectHideFlags: 0

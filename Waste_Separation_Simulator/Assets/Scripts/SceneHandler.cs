@@ -10,8 +10,6 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
-    public GameObject settingsSubMenuGerman;
-    public GameObject startMenuGerman;
     public GameObject settingsSubMenu;
     public GameObject startMenu;
     public Button play;
@@ -23,6 +21,21 @@ public class SceneHandler : MonoBehaviour
     public Button easy;
     public Button normal;
     public Button hard;
+
+    public GameObject settingsSubMenuGerman;
+    public GameObject startMenuGerman;
+    public Button zurueck;
+    public Button beenden;
+    public Button englishInGerman;
+    public Button deutschInGerman;
+    public Button einfach;
+    public Button normalGerman;
+    public Button schwer;
+
+
+
+
+
     public Color hoverColor = Color.grey;
     public Color stopHoverColor = Color.white;
     void Awake()
@@ -31,7 +44,7 @@ public class SceneHandler : MonoBehaviour
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
     }
-
+    // -------------------------- AUSFÜHRUNG VON ONCLICKS -------------------------------
     public void PointerClick(object sender, PointerEventArgs e)
     {
         //--------------------------- MAIN MENU --------------------------------------
@@ -39,64 +52,81 @@ public class SceneHandler : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        else if(e.target.name == "Settings")
+        else if(e.target.name == "Settings" && GameObject.Find(e.target.name).activeSelf == true)
         {
-            settingsSubMenu.SetActive(true);
-            startMenu.SetActive(false);
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
         }
         //--------------------------- SETTINGS MENU --------------------------------------
         else if (e.target.name == "back")
         {
-            settingsSubMenu.SetActive(false);
-            startMenu.SetActive(true);
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
+            Debug.Log("back wurde gedrückt");
+        }
+        else if (e.target.name == "zurueck")
+        {
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
+            Debug.Log("zurueck wurde geklickt");
         }
         else if (e.target.name == "Deutsch")
         {
-            deutsch.onClick.Invoke();
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
+        }
+        else if (e.target.name == "English")
+        {
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
         }
         else if (e.target.name == "Easy")
         {
-            easy.onClick.Invoke();
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
             Debug.Log("invoked easy");
         }
         else if (e.target.name == "Normal")
         {
-            normal.onClick.Invoke();
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
         }
         else if (e.target.name == "Hard")
         {
-            hard.onClick.Invoke();
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
         }
     }
-
-
+    //---------------------- FARBVERÄNDERUNG -----------------------------
     public void PointerInside(object sender, PointerEventArgs e)
     {
         //--------------------------- MAIN MENU --------------------------------------
-        if (e.target.name == "Play")
+        if (e.target.name == "Play" && GameObject.Find(e.target.name).activeSelf == true)
         {
             //Debug.Log("Button was entered");
             e.target.GetComponent<Image>().color = hoverColor;
         }
-        else if (e.target.name == "Settings")
+        else if (e.target.name == "Settings" && GameObject.Find(e.target.name).activeSelf == true)
         {
+            
             e.target.GetComponent<Image>().color = hoverColor;
         }
-        else if (e.target.name == "Quit")
+        else if (e.target.name == "Quit" && GameObject.Find(e.target.name).activeSelf == true)
         {
+            
             e.target.GetComponent<Image>().color = hoverColor;
         }
         //--------------------------- SETTINGS MENU --------------------------------------
-        else if (e.target.name == "back")
+        else if (e.target.name == "back" && GameObject.Find(e.target.name).activeSelf == true)
         {
+            
+            e.target.GetComponent<Image>().color = hoverColor;
+        }
+        else if (e.target.name == "zurueck" && GameObject.Find(e.target.name).activeSelf == true)
+        {
+            
             e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Easy")
         {
+           
             e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Normal")
         {
+            Debug.Log(e.target.name + " wird dunkler gemacht");
             e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Hard")
@@ -134,6 +164,10 @@ public class SceneHandler : MonoBehaviour
         {
             e.target.GetComponent<Image>().color = stopHoverColor;
         }
+        else if (e.target.name == "zurueck")
+        {
+            e.target.GetComponent<Image>().color = stopHoverColor;
+        }
         else if (e.target.name == "Easy")
         {
             e.target.GetComponent<Image>().color = stopHoverColor;
@@ -146,7 +180,7 @@ public class SceneHandler : MonoBehaviour
         {
             e.target.GetComponent<Image>().color = stopHoverColor;
         }
-        else if (e.target.name == "English")
+        else if (e.target.name == "English" )
         {
             e.target.GetComponent<Image>().color = stopHoverColor;
         }

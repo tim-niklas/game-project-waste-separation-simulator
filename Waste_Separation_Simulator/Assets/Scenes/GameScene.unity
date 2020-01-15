@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12035518, g: 0.18584053, b: 0.3342108, a: 1}
+  m_IndirectSpecularColor: {r: 0.12027651, g: 0.18588527, b: 0.33431786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8321,7 +8321,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 0, z: 0, w: -8.785637}
+  m_BoundingSphereOverride: {x: 0, y: 0.19140625, z: 0.04296875, w: -0.05078125}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11784,7 +11784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 5
+  startingTime: 20
   timerStart: 0
   timerText: {fileID: 1511395301}
   scoreNum: {fileID: 1069201925}
@@ -11792,6 +11792,8 @@ MonoBehaviour:
   timerAudio: {fileID: 978926155}
   endScreenShown: 0
   endScreen: {fileID: 1145883804}
+  laserPointer: {fileID: 0}
+  player: {fileID: 0}
   waste: {fileID: 690838966}
 --- !u!114 &1069201924
 MonoBehaviour:
@@ -18440,6 +18442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49422c0315818d744a41e67f7f877093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserPointer: {fileID: 0}
+  player: {fileID: 0}
   restart: {fileID: 381022463}
   exit: {fileID: 1988764318}
   hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

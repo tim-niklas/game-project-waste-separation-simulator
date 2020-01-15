@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class PointerInGame : MonoBehaviour
 {
-    SteamVR_LaserPointer laserPointer;
-    GameObject player;
+    public SteamVR_LaserPointer laserPointer;
+    public GameObject player;
 
     public Button restart;
     public Button exit;

@@ -88,6 +88,11 @@ public class SceneHandler : MonoBehaviour
         {
             GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
         }
+        //-----------------INFORMATIONSTERMINAL-------------------------
+        else if (e.target.name == "Special" || e.target.name == "Bio" || e.target.name == "Glass" || e.target.name == "Paper" || e.target.name == "Residual" || e.target.name == "Packaging")
+        {
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
+        }
     }
     //---------------------- FARBVERÄNDERUNG -----------------------------
     public void PointerInside(object sender, PointerEventArgs e)
@@ -141,6 +146,11 @@ public class SceneHandler : MonoBehaviour
         {
             e.target.GetComponent<Image>().color = hoverColor;
         }
+        //--------------------------- INFORMATIONSTERMINAL -------------------------------
+        else if (e.target.name == "Special" || e.target.name == "Bio" || e.target.name == "Glass" || e.target.name == "Paper" || e.target.name == "Residual" || e.target.name == "Packaging")
+        {
+            e.target.GetComponent<Image>().color = hoverColor;
+        }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
@@ -185,6 +195,11 @@ public class SceneHandler : MonoBehaviour
             e.target.GetComponent<Image>().color = stopHoverColor;
         }
         else if (e.target.name == "Deutsch")
+        {
+            e.target.GetComponent<Image>().color = stopHoverColor;
+        }
+        //--------------------------- INFORMATIONSTERMINAL -------------------------------
+        else if (e.target.name == "Special" || e.target.name == "Bio" || e.target.name == "Glass" || e.target.name == "Paper" || e.target.name == "Residual" || e.target.name == "Packaging")
         {
             e.target.GetComponent<Image>().color = stopHoverColor;
         }

@@ -101,7 +101,17 @@ public class BinController : MonoBehaviour
             signalLamp.GetComponent<MeshRenderer>().material = PaperLamp;
         }
 
+        StartCoroutine(ExampleCoroutine());
+
         Destroy(collision.gameObject);
+
+    }
+
+    IEnumerator ExampleCoroutine()
+    {        
+        //yield on a new YieldInstruction that waits for 0.5 seconds.
+        yield return new WaitForSeconds(0.5f);
+        signalLamp.GetComponent<MeshRenderer>().material = MyLamp;
     }
 
 }

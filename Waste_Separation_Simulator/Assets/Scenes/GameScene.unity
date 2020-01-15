@@ -8409,7 +8409,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.7e-44, y: 1.1e-44, z: 6e-45, w: 1.1754945e-38}
+  m_BoundingSphereOverride: {x: 6.829149e+22, y: 7.3908407e+22, z: 3.8384257e+12,
+    w: 3.0990291e+32}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11878,7 +11879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 5
+  startingTime: 30
   timerStart: 0
   timerText: {fileID: 1511395301}
   scoreNum: {fileID: 1069201925}
@@ -11886,7 +11887,6 @@ MonoBehaviour:
   timerAudio: {fileID: 978926155}
   endScreenShown: 0
   endScreen: {fileID: 1145883804}
-  laserPointer: {fileID: 1564707820}
   waste: {fileID: 690838966}
 --- !u!114 &1069201924
 MonoBehaviour:
@@ -15387,7 +15387,7 @@ PrefabInstance:
     - target: {fileID: 3415735317816269980, guid: e029be321f2b824439bb15ce38825e63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.236
+      value: -1.243
       objectReference: {fileID: 0}
     - target: {fileID: 3415735317816269980, guid: e029be321f2b824439bb15ce38825e63,
         type: 3}
@@ -19098,7 +19098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967488602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.236, y: 1.989, z: 1.433}
+  m_LocalPosition: {x: -1.243, y: 1.989, z: 1.433}
   m_LocalScale: {x: 1, y: 1.790873, z: 1}
   m_Children:
   - {fileID: 1393242343}

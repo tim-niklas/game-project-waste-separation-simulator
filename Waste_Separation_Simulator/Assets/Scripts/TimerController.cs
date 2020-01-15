@@ -19,9 +19,9 @@ public class TimerController : MonoBehaviour
     public AudioSource timerAudio;
     public bool endScreenShown;
     public GameObject endScreen;
-   
-    SteamVR_LaserPointer laserPointer;
-    GameObject player;
+
+    public SteamVR_LaserPointer laserPointer;
+    public GameObject player;
 
     public GameObject waste;
 
@@ -81,7 +81,8 @@ public class TimerController : MonoBehaviour
                     //Hide all Waste
                     waste.SetActive(false);
                     //Activate Pointer
-                    //laserPointer.enabled = !laserPointer.enabled;
+                    //
+                    laserPointer.enabled = !laserPointer.enabled;
 
 
                     endScreenShown = true;

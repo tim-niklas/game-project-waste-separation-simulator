@@ -9,8 +9,11 @@ using UnityEngine.SceneManagement;
 
 public class PointerInGame : MonoBehaviour
 {
-    public SteamVR_LaserPointer laserPointer;
+   
 
+    public SteamVR_LaserPointer laserPointer;
+    public GameObject player;
+    
     public Button restart;
     public Button exit;
     public Color hoverColor = Color.grey;
@@ -18,6 +21,9 @@ public class PointerInGame : MonoBehaviour
 
     void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("RightHand");
+        laserPointer = player.GetComponent<SteamVR_LaserPointer>();
+
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;

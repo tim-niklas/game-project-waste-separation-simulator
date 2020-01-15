@@ -37,8 +37,8 @@ public class BinController : MonoBehaviour
     void Start()
     {
         //change the difficulty
-        diffController = GameObject.Find("DifficultyController");
-        minusTime = diffController.GetComponent<DifficultyController>().minusTime;
+        //diffController = GameObject.Find("DifficultyController");
+        //minusTime = diffController.GetComponent<DifficultyController>().minusTime;
     }
 
     // Update is called once per frame
@@ -64,6 +64,7 @@ public class BinController : MonoBehaviour
             scoreTextObject.GetComponent<TimerController>().currentTime += minusTime;
             audioWrongWaste.GetComponent<AudioSource>().Play(0);
             signalLamp.GetComponent<MeshRenderer>().material = BioLamp;
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "GlassWaste")
         {
@@ -71,6 +72,7 @@ public class BinController : MonoBehaviour
             scoreTextObject.GetComponent<TimerController>().currentTime -= minusTime;
             audioWrongWaste.GetComponent<AudioSource>().Play(0);
             signalLamp.GetComponent<MeshRenderer>().material = GlassLamp;
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "RestWaste")
         {
@@ -78,6 +80,7 @@ public class BinController : MonoBehaviour
             scoreTextObject.GetComponent<TimerController>().currentTime -= minusTime;
             audioWrongWaste.GetComponent<AudioSource>().Play(0);
             signalLamp.GetComponent<MeshRenderer>().material = RestLamp;
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "YellowWaste")
         {
@@ -85,6 +88,7 @@ public class BinController : MonoBehaviour
             scoreTextObject.GetComponent<TimerController>().currentTime -= minusTime;
             audioWrongWaste.GetComponent<AudioSource>().Play(0);
             signalLamp.GetComponent<MeshRenderer>().material = YellowLamp;
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "SonderWaste")
         {
@@ -92,6 +96,7 @@ public class BinController : MonoBehaviour
             scoreTextObject.GetComponent<TimerController>().currentTime -= minusTime;
             audioWrongWaste.GetComponent<AudioSource>().Play(0);
             signalLamp.GetComponent<MeshRenderer>().material = SonderLamp;
+            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "PaperWaste")
         {
@@ -99,11 +104,12 @@ public class BinController : MonoBehaviour
             scoreTextObject.GetComponent<TimerController>().currentTime -= minusTime;
             audioWrongWaste.GetComponent<AudioSource>().Play(0);
             signalLamp.GetComponent<MeshRenderer>().material = PaperLamp;
+            Destroy(collision.gameObject);
         }
 
         StartCoroutine(ExampleCoroutine());
 
-        Destroy(collision.gameObject);
+       
 
     }
 

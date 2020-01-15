@@ -11,6 +11,8 @@ TagManager:
   - RestWaste
   - SonderWaste
   - PaperWaste
+  - RightHand
+  - LeftHand
   layers:
   - Default
   - TransparentFX

@@ -38,6 +38,7 @@ public class SceneHandler : MonoBehaviour
 
     public Color hoverColor = Color.grey;
     public Color stopHoverColor = Color.white;
+    public Color originalColor;
     void Awake()
     {
         laserPointer.PointerIn += PointerInside;
@@ -149,6 +150,7 @@ public class SceneHandler : MonoBehaviour
         //--------------------------- INFORMATIONSTERMINAL -------------------------------
         else if (e.target.name == "Special" || e.target.name == "Bio" || e.target.name == "Glass" || e.target.name == "Paper" || e.target.name == "Residual" || e.target.name == "Packaging")
         {
+            originalColor = e.target.GetComponent<Image>().color; 
             e.target.GetComponent<Image>().color = hoverColor;
         }
     }
@@ -201,7 +203,7 @@ public class SceneHandler : MonoBehaviour
         //--------------------------- INFORMATIONSTERMINAL -------------------------------
         else if (e.target.name == "Special" || e.target.name == "Bio" || e.target.name == "Glass" || e.target.name == "Paper" || e.target.name == "Residual" || e.target.name == "Packaging")
         {
-            e.target.GetComponent<Image>().color = stopHoverColor;
+            e.target.GetComponent<Image>().color = originalColor;
         }
     }
 }

@@ -7,7 +7,7 @@ using Valve.VR.Extras;
 public class TimerController : MonoBehaviour
 {
     public float currentTime = 0f;
-    public float startingTime = 5; // 2 minutes
+    public float startingTime = 120; // 2 minutes
 
     public bool timerStart = false; // bool for the countdown 3,2,1,GO
 
@@ -88,8 +88,7 @@ public class TimerController : MonoBehaviour
                     
 
                 }
-                
-                //Stop game (like Pausemenü) and show ScoreDisplay
+        
                
             }
 

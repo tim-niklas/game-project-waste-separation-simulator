@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public GameObject player;
+
     public GameObject settingsSubMenuGerman;
     public GameObject startMenuGerman;
     public GameObject settingsSubMenu;
@@ -27,6 +29,8 @@ public class SceneHandler : MonoBehaviour
     public Color stopHoverColor = Color.white;
     void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("RightHand");
+        laserPointer = player.GetComponent<SteamVR_LaserPointer>();
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;

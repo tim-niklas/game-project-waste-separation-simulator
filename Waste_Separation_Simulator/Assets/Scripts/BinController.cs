@@ -37,8 +37,8 @@ public class BinController : MonoBehaviour
     void Start()
     {
         //change the difficulty
-        diffController = GameObject.Find("DifficultyController");
-        minusTime = diffController.GetComponent<DifficultyController>().minusTime;
+       // diffController = GameObject.Find("DifficultyController");
+       // minusTime = diffController.GetComponent<DifficultyController>().minusTime;
     }
 
     // Update is called once per frame

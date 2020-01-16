@@ -57,6 +57,11 @@ public class SceneHandler : MonoBehaviour
         {
             GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
         }
+        else if (e.target.name == "Quit" && GameObject.Find(e.target.name).activeSelf == true)
+        {
+            GameObject.Find(e.target.name).GetComponent<Button>().onClick.Invoke();
+        }
+
         //--------------------------- SETTINGS MENU --------------------------------------
         else if (e.target.name == "back")
         {

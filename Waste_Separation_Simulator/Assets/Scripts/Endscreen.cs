@@ -8,21 +8,33 @@ using TMPro;
 public class Endscreen : MonoBehaviour
 {
     public TMP_Text endText;
+    public TMP_Text endTextEnglish;
     public GameObject scoreObject;
+
+    public GameObject diffController;
+    bool language;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        diffController = GameObject.Find("DifficultyController");
+        language = diffController.GetComponent<DifficultyController>().languageIsGerman;
     }
 
     // Update is called once per frame
     void Update()
     {
-        endText.GetComponent<TMP_Text>().text = "ZEIT IST UM! PUNKTE: " + scoreObject.GetComponent<ScoreController>().scoreNumber;
+        if (language == true)
+        {
+            endText.GetComponent<TMP_Text>().text = "ZEIT IST UM! PUNKTE: " + scoreObject.GetComponent<ScoreController>().scoreNumber;
+          
+        }
+        else
+        {
+            endTextEnglish.GetComponent<TMP_Text>().text = "TIME'S UP! POINTS: " + scoreObject.GetComponent<ScoreController>().scoreNumber;   
+        }
     }
-
-
+  
     public void LoadMenuScene()
     {
         SceneManager.LoadScene("MenuScene");

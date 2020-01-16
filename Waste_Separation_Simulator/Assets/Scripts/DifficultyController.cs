@@ -7,7 +7,6 @@ using TMPro;
 public class DifficultyController : MonoBehaviour
 {
     public float minusTime = 5;
-    public float plusTime = 2;
 
     public Button easy;
     public Button medium;
@@ -18,6 +17,8 @@ public class DifficultyController : MonoBehaviour
     public TMP_Text easyTextGerman;
     public TMP_Text mediumTextGerman;
     public TMP_Text hardTextGerman;
+
+    public bool languageIsGerman = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,20 @@ public class DifficultyController : MonoBehaviour
     {
 
     }
+
+    public void LanguageToGerman() {
+
+        languageIsGerman = true;
+        Debug.Log("Invoked German");
+    }
+
+    public void LanguageToEnglish()
+    {
+
+        languageIsGerman = false;
+        Debug.Log("Invoked English");
+    }
+
 
     public void Diffeasy()
     {

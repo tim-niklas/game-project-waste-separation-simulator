@@ -7,10 +7,10 @@ public class BinController : MonoBehaviour
 {
     public string sortOfWaste = ""; //Sort of waste -> BioWaste, GlassWaste, PaperWaste, RestWaste, YellowWaste, SonderWaste
 
-    public float minusPoints = 5;
-    public float plusPoints = 10;
-    public float minusTime = 5;
-    public float plusTime = 4;
+    float minusPoints = 75;
+    float plusPoints = 100;
+    float minusTime = 5;
+    float plusTime = 3;
 
     public GameObject scoreTextObject; //get the scoreText
 
@@ -37,8 +37,8 @@ public class BinController : MonoBehaviour
     void Start()
     {
         //change the difficulty
-        //diffController = GameObject.Find("DifficultyController");
-        //minusTime = diffController.GetComponent<DifficultyController>().minusTime;
+        diffController = GameObject.Find("DifficultyController");
+        minusTime = diffController.GetComponent<DifficultyController>().minusTime;
     }
 
     // Update is called once per frame

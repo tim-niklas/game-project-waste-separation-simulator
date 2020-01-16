@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 public class Scoreboard : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -61,10 +62,13 @@ public class Scoreboard : MonoBehaviour
        
         //creates a line for every score that has been made 
         highscoreEntryTransformList = new List<Transform>();
-        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
+        if (GameObject.Find("HighscoreEntryTemplate(Clone)") == false)
         {
-            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+            foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
+            {
+                CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
 
+            }
         }
 
     }
@@ -76,6 +80,7 @@ public class Scoreboard : MonoBehaviour
         {
             return;
         }
+       
         //choose position where to put the highscore entry
         float templateHeight = 20f;
         Transform entryTransform = Instantiate(entryTemplate, container);

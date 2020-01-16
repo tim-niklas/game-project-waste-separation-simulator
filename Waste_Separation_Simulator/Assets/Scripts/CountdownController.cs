@@ -7,7 +7,7 @@ public class CountdownController : MonoBehaviour
 {
 
     float currentTime = 0f;
-    float startingTime = 3f; // 3,2,1,GO
+    float startingTime = 4f; // 3,2,1,GO
 
     public Text countdownText;
 

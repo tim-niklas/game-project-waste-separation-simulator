@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12027651, g: 0.18588527, b: 0.33431786, a: 1}
+  m_IndirectSpecularColor: {r: 0.12035518, g: 0.18584053, b: 0.3342108, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10088,7 +10088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 5
+  startingTime: 10
   timerStart: 0
   timerText: {fileID: 1511395301}
   timerAudio: {fileID: 978926155}
@@ -17788,6 +17788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968602962}
+  - component: {fileID: 1968602963}
   m_Layer: 0
   m_Name: BinTexts
   m_TagString: Untagged
@@ -17811,6 +17812,21 @@ Transform:
   m_Father: {fileID: 208590329}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1968602963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968602961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd4be0b8c1fd0c49bca950b62800347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  binGerman: {fileID: 2112969281}
+  binEnglish: {fileID: 308350662}
+  diffController: {fileID: 0}
 --- !u!4 &1975194975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 436524, guid: d1f03074e612bbd4b84736d2d7aee882,

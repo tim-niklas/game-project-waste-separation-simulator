@@ -99,7 +99,7 @@ public class TimerController : MonoBehaviour
                     //Hide all Waste
                     waste.SetActive(false);
                     //Activate Pointer
-                    //laserPointer.enabled = !laserPointer.enabled;
+                    laserPointer.enabled = !laserPointer.enabled;
 
                 
 

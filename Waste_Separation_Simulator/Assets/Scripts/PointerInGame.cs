@@ -18,7 +18,8 @@ public class PointerInGame : MonoBehaviour
     public Button exit;
     public Color hoverColor = Color.grey;
     public Color buttonColor = Color.white;
-
+    public Button neustart;
+    public Button beenden;
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("RightHand");
@@ -46,11 +47,11 @@ public class PointerInGame : MonoBehaviour
     {
         if (e.target.name == "Restart")
         {
-            restart.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
         else if (e.target.name == "Exit")
         {
-            exit.GetComponent<Image>().color = hoverColor;
+            e.target.GetComponent<Image>().color = hoverColor;
         }
 
     }
@@ -59,11 +60,11 @@ public class PointerInGame : MonoBehaviour
     {
         if (e.target.name == "Restart")
         {
-            restart.GetComponent<Image>().color = buttonColor;
+            e.target.GetComponent<Image>().color = buttonColor;
         }
         else if (e.target.name == "Exit")
         {
-            exit.GetComponent<Image>().color = buttonColor;
+            e.target.GetComponent<Image>().color = buttonColor;
         }
 
     }

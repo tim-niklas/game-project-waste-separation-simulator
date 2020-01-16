@@ -248,7 +248,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000011964089612, guid: a3de4bde509a12c4794522b17abcea44, type: 3}
       propertyPath: m_Name
-      value: Saucisson
+      value: Saucisson Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1000011964089612, guid: a3de4bde509a12c4794522b17abcea44, type: 3}
       propertyPath: m_TagString
@@ -300,15 +300,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011411559418, guid: a3de4bde509a12c4794522b17abcea44, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.0169706
+      value: 1.6609752
       objectReference: {fileID: 0}
     - target: {fileID: 4000011411559418, guid: a3de4bde509a12c4794522b17abcea44, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.0169706
+      value: 1.6609752
       objectReference: {fileID: 0}
     - target: {fileID: 4000011411559418, guid: a3de4bde509a12c4794522b17abcea44, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.0169706
+      value: 1.6609752
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3de4bde509a12c4794522b17abcea44, type: 3}

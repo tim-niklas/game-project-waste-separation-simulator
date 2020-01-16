@@ -248,7 +248,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_Name
-      value: Joghurt
+      value: Joghurt Variant
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_TagString
@@ -260,11 +260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2005
+      value: 1.2384
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.5272
+      value: 7.5296
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -300,15 +300,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3171377
+      value: 1.1573871
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.3171377
+      value: 1.1573871
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a398b899693626449947670be6f562b9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.3171377
+      value: 1.1573871
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a398b899693626449947670be6f562b9, type: 3}

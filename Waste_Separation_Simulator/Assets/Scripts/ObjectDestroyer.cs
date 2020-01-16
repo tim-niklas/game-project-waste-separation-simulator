@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ObjectDestroyer : MonoBehaviour
 {
+    public GameObject scoreTextObject; //get the scoreText
+    public float minusPointsByDestroy = 15;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,7 @@ public class ObjectDestroyer : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(collision.gameObject);
+        scoreTextObject.GetComponent<ScoreController>().scoreNumber -= minusPointsByDestroy;
     }
 
 }

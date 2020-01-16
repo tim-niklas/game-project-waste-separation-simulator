@@ -10,7 +10,7 @@ public class BinController : MonoBehaviour
     float minusPoints = 75;
     float plusPoints = 100;
     float minusTime = 5;
-    float plusTime = 3;
+    float plusTime = 2;
 
     public GameObject scoreTextObject; //get the scoreText
 

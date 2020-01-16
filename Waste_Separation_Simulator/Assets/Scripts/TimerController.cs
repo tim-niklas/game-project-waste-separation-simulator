@@ -78,8 +78,8 @@ public class TimerController : MonoBehaviour
                 {
 
                 
-                    diffController = GameObject.Find("DifficultyController");
-                    language = diffController.GetComponent<DifficultyController>().languageIsGerman;
+                    diffController = GameObject.FindWithTag("DiffController");
+                    language = diffController.GetComponent<DifficultyController>().language;
 
                     if (language == true)
                     {

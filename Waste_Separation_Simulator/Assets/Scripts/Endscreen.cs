@@ -17,8 +17,9 @@ public class Endscreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        diffController = GameObject.Find("DifficultyController");
-        language = diffController.GetComponent<DifficultyController>().languageIsGerman;
+
+        diffController = GameObject.FindWithTag("DiffController");
+        language = diffController.GetComponent<DifficultyController>().language;
     }
 
     // Update is called once per frame

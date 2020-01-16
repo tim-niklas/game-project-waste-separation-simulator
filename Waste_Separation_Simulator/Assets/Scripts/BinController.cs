@@ -37,7 +37,7 @@ public class BinController : MonoBehaviour
     void Start()
     {
         //change the difficulty
-        diffController = GameObject.Find("DifficultyController");
+        diffController = GameObject.FindWithTag("DiffController");
         minusTime = diffController.GetComponent<DifficultyController>().minusTime;
     }
 

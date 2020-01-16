@@ -73,11 +73,14 @@ public class TimerController : MonoBehaviour
                 timerAudio.Pause();
                 if (endScreenShown == false)
                 {
+
                     endScreen.SetActive(true);
+                    Debug.Log("bin aktiv und hier die zahl: " + scoreNum.scoreNumber);
                     scoreBoa.AddHighscoreEntry((int)scoreNum.scoreNumber);
                     endScreen.SetActive(false);
+                    Debug.Log("Hier wurde grad abgeschalten");
                     endScreen.SetActive(true);
-
+                    Debug.Log("und hier wieder angeschalten");
                     //Hide all Waste
                     waste.SetActive(false);
                     //Activate Pointer

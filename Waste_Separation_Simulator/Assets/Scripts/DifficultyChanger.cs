@@ -21,6 +21,9 @@ public class DifficultyChanger : MonoBehaviour
 
     GameObject diffController;
 
+    GameObject german;
+    GameObject english;
+
     
     // Start is called before the first frame update
     void Start()

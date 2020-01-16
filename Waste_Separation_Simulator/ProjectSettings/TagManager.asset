@@ -13,6 +13,16 @@ TagManager:
   - PaperWaste
   - RightHand
   - LeftHand
+  - DiffController
+  - HardTextGerman
+  - MediumTextGerman
+  - EasyTextGerman
+  - HardTextEnglish
+  - MediumTextEnglish
+  - EasyTextEnglish
+  - Setting English
+  - Setting German
+  - DiffChanger
   layers:
   - Default
   - TransparentFX

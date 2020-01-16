@@ -8,8 +8,9 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject germanPause;
     public GameObject englishPause;
+    public GameObject diffController;
 
-
+    public bool german;
     void Start()
     {
         
@@ -18,9 +19,21 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Menu Button") == true)
-        {
 
+        diffController = GameObject.FindWithTag("DiffController");
+        german = diffController.GetComponent<DifficultyController>().language;
+        if (Input.GetButtonDown("Menu Button") == true)
+        {
+            if (german == true)
+            {
+                germanPause.SetActive(true);
+            }
+            if (german == false)
+            {
+                englishPause.SetActive(true);
+            }
         }
+       
+        
     }
 }

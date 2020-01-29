@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
+
+/**
+* @brief This class is responsible to change the bin texts to german or english
+*/
 public class BinLanguage : MonoBehaviour
 {
     public GameObject binGerman;
     public GameObject binEnglish;
     public GameObject diffController;
     bool language;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +31,6 @@ public class BinLanguage : MonoBehaviour
         }
         else
         {
-
             binEnglish.SetActive(true);
             binGerman.SetActive(false);
         }

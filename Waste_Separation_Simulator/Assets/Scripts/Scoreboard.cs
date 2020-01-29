@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
+
+/**
+* @brief This class is responsible for the highscore.
+* 
+* 
+*/
 public class Scoreboard : MonoBehaviour
 {
     // Start is called before the first frame update

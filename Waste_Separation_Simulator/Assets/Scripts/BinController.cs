@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/**
+* @brief This class is responsible for the bins and their function.
+*/
 public class BinController : MonoBehaviour
 {
     public string sortOfWaste = ""; //Sort of waste -> BioWaste, GlassWaste, PaperWaste, RestWaste, YellowWaste, SonderWaste
@@ -14,7 +18,6 @@ public class BinController : MonoBehaviour
 
     public GameObject scoreTextObject; //get the scoreText
 
-    //[HideInInspector]
     public GameObject diffController;
 
     //Audio
@@ -33,7 +36,6 @@ public class BinController : MonoBehaviour
     //Lamp
     public GameObject signalLamp;
 
-    // Start is called before the first frame update
     void Start()
     {
         //change the difficulty
@@ -41,12 +43,10 @@ public class BinController : MonoBehaviour
         minusTime = diffController.GetComponent<DifficultyController>().minusTime;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
+    /**
+    * @brief This method is called if it hit by any object and looks after there tag (sort of waste) and then give points and change the color of the lamp
+    */
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == sortOfWaste)
@@ -108,9 +108,6 @@ public class BinController : MonoBehaviour
         }
 
         StartCoroutine(ExampleCoroutine());
-
-       
-
     }
 
     IEnumerator ExampleCoroutine()

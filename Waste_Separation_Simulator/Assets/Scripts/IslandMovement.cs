@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+* @brief This class is responsible for the movement of the islands
+*/
 public class IslandMovement : MonoBehaviour
 {
     public float movementSpeed = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+ 
     // Update is called once per frame
     void Update()
     {

@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+/**
+* @brief This class is responsible for the waste spawner
+* 
+* 
+*/
 public class WasteSpawner : MonoBehaviour
 {
     public List<GameObject> wasteList;
     public GameObject WasteHolder;
     public float Timer;
     public float waitSecondsToSpawn = 1f;
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -29,9 +26,7 @@ public class WasteSpawner : MonoBehaviour
             myObject.transform.SetParent(WasteHolder.transform);
             Timer = waitSecondsToSpawn;
         }
- 
     }
-
 }
 
 

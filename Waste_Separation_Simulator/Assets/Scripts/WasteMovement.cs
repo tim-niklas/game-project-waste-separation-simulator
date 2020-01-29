@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+* @brief This class is responsible for the waste movement in water.
+*/
 public class WasteMovement : MonoBehaviour
 {
-
     private bool inWater;
     public float movementSpeed = 0.75f; // Waste's speed
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    /**
+    * @brief Looks if the waste is in water, if so then move it
+    */
     void Update()
     {
-        // Make the waste moving in the water
         if (inWater)
         {
             transform.rotation = Quaternion.Euler(Random.Range(2.5f, -2.5f), Random.Range(2.5f, -2.5f), Random.Range(2.5f, -2.5f)); //try to simulate how the object moves in water - TO-DO: improve
@@ -25,7 +23,9 @@ public class WasteMovement : MonoBehaviour
         }
     }
 
-    // Waste is in water
+    /**
+    * @brief Waste in water
+    */
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "WaterLine")
@@ -34,7 +34,9 @@ public class WasteMovement : MonoBehaviour
         }
     }
 
-    // Waste is not in water
+    /**
+     * @brief Waste not in water
+     */
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "WaterLine")

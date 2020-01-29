@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+* @brief This class is responsible to to get the difficulty and language in the GameScene from the MenuScene
+*/
 public class DifficultyController : MonoBehaviour
 {
 
@@ -15,12 +18,5 @@ public class DifficultyController : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-   
-    }
-
 
 }

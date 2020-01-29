@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+* @brief This class is responsible to delete the values of the highscore (just for testing)
+*/
 public class deleteSaves : MonoBehaviour
 {
     // Start is called before the first frame update

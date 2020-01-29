@@ -1,11 +1,14 @@
-﻿/* SceneHandler.cs from https://medium.com/@setzeus/tutorial-steamvr-2-0-laser-pointer-bbc816ebeec5 */
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
 using UnityEngine.SceneManagement;
+
+/**
+* @brief This class is responsible for UI in MenuScene and the interaction with the laser pointer.
+*/
 
 public class SceneHandler : MonoBehaviour
 {
@@ -31,10 +34,6 @@ public class SceneHandler : MonoBehaviour
     public Button einfach;
     public Button normalGerman;
     public Button schwer;
-
-
-
-
 
     public Color hoverColor = Color.grey;
     public Color stopHoverColor = Color.white;

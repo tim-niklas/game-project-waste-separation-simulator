@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+* @brief This class is responsible to keep track of the diffulty and language changes
+*/
 public class DifficultyChanger : MonoBehaviour
 {
     public float minusTime = 5;
-
 
     public TMP_Text easyText;
     public TMP_Text mediumText;
@@ -20,10 +22,6 @@ public class DifficultyChanger : MonoBehaviour
     public bool languageIsGerman = false;
 
     GameObject diffController;
-
-    GameObject german;
-    GameObject english;
-
     
     // Start is called before the first frame update
     void Start()
@@ -35,29 +33,29 @@ public class DifficultyChanger : MonoBehaviour
         easyTextGerman.GetComponent<TMP_Text>().color = Color.green;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /**
+    * @brief Changes the language to German
+    */
     public void LanguageToGerman()
     {
-
         languageIsGerman = true;
         diffController.GetComponent<DifficultyController>().language = languageIsGerman;
         Debug.Log("Invoked German");
     }
 
+    /**
+    * @brief Changes the language to English
+    */
     public void LanguageToEnglish()
     {
-
         languageIsGerman = false;
         diffController.GetComponent<DifficultyController>().language = languageIsGerman;
         Debug.Log("Invoked English");
     }
 
-
+    /**
+    * @brief Change difficulty to easy
+    */
     public void Diffeasy()
     {
         minusTime = 5;
@@ -65,13 +63,16 @@ public class DifficultyChanger : MonoBehaviour
         easyText.GetComponent<TMP_Text>().color = Color.green;
         hardText.GetComponent<TMP_Text>().color = Color.black;
         mediumText.GetComponent<TMP_Text>().color = Color.black;
+
         // ---- GERMAN VERSION ------
         easyTextGerman.GetComponent<TMP_Text>().color = Color.green;
         hardTextGerman.GetComponent<TMP_Text>().color = Color.black;
-        mediumTextGerman.GetComponent<TMP_Text>().color = Color.black;
-
-        Debug.Log("Invoked Easy");
+        mediumTextGerman.GetComponent<TMP_Text>().color = Color.black;      
     }
+
+    /**
+     * @brief Change difficulty to medium
+    */
     public void Diffmedium()
     {
         minusTime = 10;
@@ -79,13 +80,16 @@ public class DifficultyChanger : MonoBehaviour
         mediumText.GetComponent<TMP_Text>().color = Color.blue;
         easyText.GetComponent<TMP_Text>().color = Color.black;
         hardText.GetComponent<TMP_Text>().color = Color.black;
-        // ------- GERMAN VERSION ------ -
+
+        // ------- GERMAN VERSION ------ 
         mediumTextGerman.GetComponent<TMP_Text>().color = Color.blue;
         easyTextGerman.GetComponent<TMP_Text>().color = Color.black;
-        hardTextGerman.GetComponent<TMP_Text>().color = Color.black;
-        Debug.Log("Invoked mediumText");
+        hardTextGerman.GetComponent<TMP_Text>().color = Color.black;  
     }
 
+    /**
+     * @brief Change difficulty to hard
+    */
     public void Diffhard()
     {
         minusTime = 15;
@@ -93,10 +97,10 @@ public class DifficultyChanger : MonoBehaviour
         hardText.GetComponent<TMP_Text>().color = Color.red;
         easyText.GetComponent<TMP_Text>().color = Color.black;
         mediumText.GetComponent<TMP_Text>().color = Color.black;
+
         // ------- GERMAN VERSION ------ 
         hardTextGerman.GetComponent<TMP_Text>().color = Color.red;
         easyTextGerman.GetComponent<TMP_Text>().color = Color.black;
-        mediumTextGerman.GetComponent<TMP_Text>().color = Color.black;
-        Debug.Log("Invoked hardText");
+        mediumTextGerman.GetComponent<TMP_Text>().color = Color.black;      
     }
 }

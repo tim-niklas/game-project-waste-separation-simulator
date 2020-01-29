@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using Valve.VR.Extras;
 
+/**
+* @brief This class is responsible for the timer and it also actives the endscreen and laser pointer if the time is up
+*/
 public class TimerController : MonoBehaviour
 {
     public float currentTime = 0f;
@@ -25,7 +28,7 @@ public class TimerController : MonoBehaviour
     public SteamVR_LaserPointer laserPointer;
     public GameObject player;
 
-    //[HideInInspector] ObjectsToDelete
+  
     public GameObject diffController;
     public GameObject waste;
 
@@ -37,7 +40,6 @@ public class TimerController : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("RightHand");
         laserPointer = player.GetComponent<SteamVR_LaserPointer>();
-
     }
 
     // Update is called once per frame
@@ -75,9 +77,7 @@ public class TimerController : MonoBehaviour
                 currentTime = 0;
                 timerAudio.Pause();
                 if (endScreenShown == false)
-                {
-
-                
+                { 
                     diffController = GameObject.FindWithTag("DiffController");
                     language = diffController.GetComponent<DifficultyController>().language;
 
@@ -100,8 +100,6 @@ public class TimerController : MonoBehaviour
                     waste.SetActive(false);
                     //Activate Pointer
                     laserPointer.enabled = !laserPointer.enabled;
-
-                
 
                     endScreenShown = true;
                

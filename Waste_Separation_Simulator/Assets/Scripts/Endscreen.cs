@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+/**
+* @brief This class is responsible for the endscreen buttons and that it has the right language texts and score
+*/
 public class Endscreen : MonoBehaviour
 {
     public TMP_Text endText;

@@ -2,36 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+* @brief This class is responsible that the DiffController (Saves the difficulty) is a singleton and that there is no another instance of it in every scene.
+*/
 public class SpawnDiffController : MonoBehaviour
 {
-
     public GameObject controller;
     public GameObject ControllerPrefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void Awake()
     {
         if (GameObject.FindGameObjectWithTag("DiffController") != null)
         {
-           //Donothing
-
+           //Do nothing
         }
         else
         {
-            //instantiate the controller
+            //Instantiate the controller
             controller = Instantiate(ControllerPrefab);
-           
         }
     }
 }

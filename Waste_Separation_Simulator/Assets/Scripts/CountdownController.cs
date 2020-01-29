@@ -19,6 +19,10 @@ public class CountdownController : MonoBehaviour
     public AudioSource countdownAudio;
 
     // Start is called before the first frame update
+    /**
+    * Starts the Countdown Audio and sets the time to the given countdown.
+    *
+    */
     void Start()
     {
         currentTime = startingTime;
@@ -26,6 +30,10 @@ public class CountdownController : MonoBehaviour
     }
 
     // Update is called once per frame
+    /**
+    * @brief If the countdown reaches 0, it starts the game.
+    *
+    */
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;

@@ -46,7 +46,7 @@ public class BinController : MonoBehaviour
 
 
     /**
-    * @brief This method is called if it hit by any object and looks after there tag (sort of waste) and then give points and change the color of the lamp
+    * @brief This method is called if it hit by any object and looks at their tag (sort of waste) and then gives points and changes the colour of the lamp
     */
     void OnCollisionEnter(Collision collision)
     {

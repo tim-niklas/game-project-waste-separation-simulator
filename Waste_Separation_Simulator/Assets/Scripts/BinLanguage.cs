@@ -16,6 +16,9 @@ public class BinLanguage : MonoBehaviour
     bool language;
 
     // Start is called before the first frame update
+    /**
+    * @brief It checks in the DiffController object, if the bool language is true or not, and depending on that switches the active gameobjects.
+    */
     void Start()
     {
         diffController = GameObject.FindWithTag("DiffController");

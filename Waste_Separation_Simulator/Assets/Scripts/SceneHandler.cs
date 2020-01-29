@@ -45,6 +45,12 @@ public class SceneHandler : MonoBehaviour
         laserPointer.PointerClick += PointerClick;
     }
     // -------------------------- AUSFÜHRUNG VON ONCLICKS -------------------------------
+
+    /**
+    * @brief Here we execute the buttons methods when it is clicked
+    *
+    * When you hover with the pointer over a button and press the trigger key, the in unity written methods are executed here. 
+    */
     public void PointerClick(object sender, PointerEventArgs e)
     {
         //--------------------------- MAIN MENU --------------------------------------
@@ -100,6 +106,11 @@ public class SceneHandler : MonoBehaviour
         }
     }
     //---------------------- FARBVERÄNDERUNG -----------------------------
+    /**
+    * @brief Here the hovercolour is changed on hovering over the button.
+    *
+    * We took a couple different colours for our buttons and changed to grey while hovering over them, to give the player feedback over what hes hovering.
+    */
     public void PointerInside(object sender, PointerEventArgs e)
     {
         //--------------------------- MAIN MENU --------------------------------------
@@ -158,7 +169,11 @@ public class SceneHandler : MonoBehaviour
             e.target.GetComponent<Image>().color = hoverColor;
         }
     }
-
+    /**
+    * @brief Here the colour is changed back 
+    *
+    * When the player takes the pointer away from the button, it switches back to its original colour.
+    */
     public void PointerOutside(object sender, PointerEventArgs e)
     {
         //--------------------------- MAIN MENU --------------------------------------

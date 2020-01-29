@@ -12,12 +12,21 @@ using UnityEngine.SceneManagement;
 */
 public class Scoreboard : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
 
     private Transform entryContainer;
     private Transform entryTemplate;
     private List<HighscoreEntry> highscoreEntryList;
     private List<Transform> highscoreEntryTransformList;
+
+    /**
+     * @brief Here we create a new HighscoreTable
+     * 
+     * 
+     * We check if theres already an existing savescore, if not, it creates a new one, if there is, it doesn't create a new one.
+     * We also sort the highscores from highest to lowest, top to bottom via Bubblesort. 
+     * At the end we create an entry at a specific point in the list, depending on which position it is.
+     */
     private void OnEnable()
     {
         if (PlayerPrefs.HasKey("highscoreTable") == false)
@@ -47,7 +56,8 @@ public class Scoreboard : MonoBehaviour
         //putting it in the list
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
-        // SORTING 
+         
+        
 
         for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
         {
@@ -79,6 +89,13 @@ public class Scoreboard : MonoBehaviour
 
     }
 
+
+    /**
+    * @brief Here an entry position is created 
+    *
+    * An entry at a specific anchorpoint is created here, which is determined by which position it currently is handling, the higher the position in the list, the further down it goes.
+    * It also colours every 2nd position differently, to mark differences in lines, and makes the first position golden to differentiate from the rest.
+    */
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
         //cap to 10 entries
@@ -110,7 +127,11 @@ public class Scoreboard : MonoBehaviour
         }
         transformList.Add(entryTransform);
     }
-
+    /**
+    * @brief Here an entry is added to the list
+    *
+    * Here we save a new entry to our list, and save the list afterwards to the registry
+    */
     public void AddHighscoreEntry(int score)
     {
         //create HighscoreEntry

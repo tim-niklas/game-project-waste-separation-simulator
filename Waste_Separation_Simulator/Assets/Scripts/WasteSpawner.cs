@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 
 /**
+* @class WasteSpawner
 * @brief This class is responsible for the waste spawner
 * 
 * 

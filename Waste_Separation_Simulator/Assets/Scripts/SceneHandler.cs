@@ -7,6 +7,7 @@ using Valve.VR.Extras;
 using UnityEngine.SceneManagement;
 
 /**
+* @class SceneHandler
 * @brief This class is responsible for UI in MenuScene and the interaction with the laser pointer.
 */
 

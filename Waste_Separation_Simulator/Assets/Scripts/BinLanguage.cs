@@ -5,6 +5,7 @@ using TMPro;
 
 
 /**
+* @class BinLanguage
 * @brief This class is responsible to change the bin texts to german or english
 */
 public class BinLanguage : MonoBehaviour

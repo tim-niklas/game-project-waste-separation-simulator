@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Valve.VR.Extras;
 
 /**
+* @class TimerController
 * @brief This class is responsible for the timer and it also actives the endscreen and laser pointer if the time is up
 */
 public class TimerController : MonoBehaviour

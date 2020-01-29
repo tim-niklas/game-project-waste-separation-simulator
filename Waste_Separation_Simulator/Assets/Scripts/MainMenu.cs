@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+* @class MainMenu
+* @brief This class has methods for the MainMenu in the MenuScene
+*/
 public class MainMenu : MonoBehaviour
 {
     /**

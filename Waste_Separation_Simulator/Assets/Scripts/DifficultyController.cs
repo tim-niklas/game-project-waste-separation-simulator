@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 /**
+* @class DifficultyController
 * @brief This class is responsible to to get the difficulty and language in the GameScene from the MenuScene
 */
 public class DifficultyController : MonoBehaviour

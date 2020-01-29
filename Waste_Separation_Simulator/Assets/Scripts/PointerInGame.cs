@@ -7,6 +7,7 @@ using Valve.VR.Extras;
 using UnityEngine.SceneManagement;
 
 /**
+* @class PointerinGame
 * @brief This class is responsible for the input of the laser pointer in the game scene.
 */
 public class PointerInGame : MonoBehaviour

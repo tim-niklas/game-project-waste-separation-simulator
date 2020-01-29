@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 /**
+* @class deleteSaves
 * @brief This class is responsible to delete the values of the highscore (just for testing)
 */
 public class deleteSaves : MonoBehaviour

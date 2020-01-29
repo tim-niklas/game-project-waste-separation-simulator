@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 /**
+* @class WasteMovement
 * @brief This class is responsible for the waste movement in water.
 */
 public class WasteMovement : MonoBehaviour

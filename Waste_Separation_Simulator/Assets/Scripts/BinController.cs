@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 
 /**
+* @class BinController
 * @brief This class is responsible for the bins and their function.
 */
 public class BinController : MonoBehaviour

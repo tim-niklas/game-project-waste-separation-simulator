@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
+* @class ObjectDestroyer
 * @brief This class is responsible for the barricade behind the boat that destroys the waste objects and keeps trakc of the minus points by detroy.
 */
 public class ObjectDestroyer : MonoBehaviour

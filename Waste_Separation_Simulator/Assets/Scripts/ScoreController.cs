@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 
 /**
+* @class ScoreController
 * @brief This class is responsible for the score and the score display.
 */
 public class ScoreController : MonoBehaviour

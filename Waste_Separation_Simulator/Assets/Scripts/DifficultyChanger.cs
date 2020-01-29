@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 /**
+* @class DifficultyChanger
 * @brief This class is responsible to keep track of the diffulty and language changes
 */
 public class DifficultyChanger : MonoBehaviour

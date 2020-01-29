@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
+* @class IslandMovement
 * @brief This class is responsible for the movement of the islands
 */
 public class IslandMovement : MonoBehaviour

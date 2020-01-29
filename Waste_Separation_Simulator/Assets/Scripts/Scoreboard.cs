@@ -6,6 +6,7 @@ using System.IO;
 using UnityEngine.SceneManagement;
 
 /**
+* @class Scoreboard
 * @brief This class is responsible for the highscore.
 * 
 * 

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 
 /**
-* @brief This class is repsonbile for the 3,2,1,GO countdown and also starts the timer
+* @class CountdownController
+* @brief This class is responsible for the 3,2,1,GO countdown and also starts the timer
 */
 public class CountdownController : MonoBehaviour
 {

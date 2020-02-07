@@ -22,6 +22,7 @@ public class PointerInGame : MonoBehaviour
     public Button neustart;
     public Button beenden;
 
+    
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("RightHand");
@@ -32,6 +33,10 @@ public class PointerInGame : MonoBehaviour
         laserPointer.PointerClick += PointerClick;
     }
 
+    /**
+    * @brief Sends you to different scenes depending on what you click on
+
+    */
     public void PointerClick(object sender, PointerEventArgs e)
     {
         if (e.target.name == "Restart")

@@ -13,7 +13,7 @@ public class WasteMovement : MonoBehaviour
     public float movementSpeed = 0.75f; // Waste's speed
 
     /**
-    * @brief Looks if the waste is in water, if so then move it
+    * @brief Looks if the waste is in water, if yes, then it moves it into a specific direction
     */
     void Update()
     {

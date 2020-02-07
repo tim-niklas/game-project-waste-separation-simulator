@@ -5,7 +5,7 @@ using System.Linq;
 
 /**
 * @class WasteSpawner
-* @brief This class is responsible for the waste spawner
+* @brief This class is responsible for the waste spawner and instantiates random objects from our prefabs
 * 
 * 
 */

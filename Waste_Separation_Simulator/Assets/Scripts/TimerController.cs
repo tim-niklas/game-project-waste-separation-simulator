@@ -7,6 +7,7 @@ using Valve.VR.Extras;
 /**
 * @class TimerController
 * @brief This class is responsible for the timer and it also actives the endscreen and laser pointer if the time is up
+* It also checks for the language and displays different endscreens depending on it
 */
 public class TimerController : MonoBehaviour
 {

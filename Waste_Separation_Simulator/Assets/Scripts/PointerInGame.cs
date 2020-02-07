@@ -35,7 +35,7 @@ public class PointerInGame : MonoBehaviour
 
     /**
     * @brief Sends you to different scenes depending on what you click on
-
+    *
     */
     public void PointerClick(object sender, PointerEventArgs e)
     {

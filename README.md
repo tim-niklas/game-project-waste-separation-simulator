@@ -1,6 +1,6 @@
 # game-project-waste-separation-simulator
  
-Title: Waste Sailer VR
+Title: Waste Sailor
 
 Game Engine: UNITY
 
